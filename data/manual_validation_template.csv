@@ -1,0 +1,1 @@
+case_id,repo_full_name,commit_sha,test_file_path,test_class,detector_name,detector_version,smell_name,detector_flag,reviewer_1_label,reviewer_2_label,adjudicated_label,notes
