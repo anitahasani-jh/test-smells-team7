@@ -16,6 +16,7 @@ def collect_history(repo_path: str, output_path: str) -> None:
         "commit_date",
         "message",
         "files_changed",
+        "changed_file_paths",
         "insertions",
         "deletions",
     ]
@@ -27,6 +28,10 @@ def collect_history(repo_path: str, output_path: str) -> None:
         writer.writeheader()
 
         for commit in Repository(repo_path).traverse_commits():
+            changed_file_paths = ";".join(
+                modified.new_path or modified.old_path or ""
+                for modified in commit.modified_files
+            )
             writer.writerow(
                 {
                     "commit_hash": commit.hash,
@@ -34,6 +39,7 @@ def collect_history(repo_path: str, output_path: str) -> None:
                     "commit_date": commit.author_date.isoformat(),
                     "message": commit.msg.strip(),
                     "files_changed": len(commit.modified_files),
+                    "changed_file_paths": changed_file_paths,
                     "insertions": commit.insertions,
                     "deletions": commit.deletions,
                 }
