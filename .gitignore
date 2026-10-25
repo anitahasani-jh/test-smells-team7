@@ -4,3 +4,14 @@ __pycache__/
 *.py[cod]
 .env
 .vscode/
+
+# Local clones and development-only samples
+pilot-mockito/
+pilot-truth/
+sample-java-repo/
+sample-project/sample-project/
+
+# Local backups and generated run outputs
+local_changes_backup.patch
+results/commit_history.csv
+results/test_smell_detections.csv
