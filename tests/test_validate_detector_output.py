@@ -51,5 +51,5 @@ class ValidateDetectorOutputTests(unittest.TestCase):
                 validate_detector_csv(str(path))
 
 
-if __ALL__ == "__main__":
+if __name__ == "__main__":
     unittest.main()
