@@ -6,7 +6,7 @@ from pathlib import Path
 from pydriller import Repository
 
 
-def collect_history(repo_path: str, output_path: str) -> None:
+def collect_history(repo_path: str, output_path: str) -> int:
     output_file = Path(output_path)
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
@@ -32,6 +32,7 @@ def collect_history(repo_path: str, output_path: str) -> None:
                 modified.new_path or modified.old_path or ""
                 for modified in commit.modified_files
             )
+
             writer.writerow(
                 {
                     "commit_hash": commit.hash,
@@ -48,6 +49,8 @@ def collect_history(repo_path: str, output_path: str) -> None:
 
     print(f"Commits collected: {count}")
     print(f"CSV saved to: {output_file.resolve()}")
+
+    return count
 
 
 if __name__ == "__main__":
