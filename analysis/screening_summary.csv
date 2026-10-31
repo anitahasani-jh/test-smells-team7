@@ -1,0 +1,7 @@
+measure,n,total,mean,median,minimum,maximum
+estimated_java_test_files,8,2692,336.5,323.5,45,767
+java_files,8,6189,773.625,716,124,1805
+github_stars,8,52112,6514,5545.5,1877,15454
+github_forks,8,10980,1372.5,1096,268,3249
+maven_files,8,70,8.75,4,0,47
+gradle_files,8,165,20.625,2.5,0,100
