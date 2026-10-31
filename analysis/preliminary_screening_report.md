@@ -43,7 +43,19 @@ The mean Java-file count is 773.6 (6,189 / 8). Medians are computed over the eig
 | google/truth | 83 | 184 | 7 | 0 |
 | awaitility/awaitility | 45 | 124 | 8 | 0 |
 
-## 4. Interpretation and limitations
+## 4. Previously recorded pilot/replication counts (not recomputed here)
+
+The repository documentation also records the following engineering-run summaries. They are reported here separately from the 8-repository screening statistics above because they describe different runs and have different limitations.
+
+| Documented run | Repositories / files | Smell observations | Measured | Not applicable / missing | Follow-up file-change events | Status |
+|---|---:|---:|---:|---:|---:|---|
+| Engineering replication A/B summary | 2 repositories; 245 test-file candidates | 5,124 | 4,724 | 400 not applicable | 13 | Process-level repeat on one machine |
+| JUnit4 fault-tolerant pilot | 205 candidates; 204 detector outputs | 4,284 | 3,950 | 334 | 10 | Partial; 1 detector failure |
+| Commons CSV early technical pilot | 44 Java files in test source | 822 binary flags | Not specified in the report | Not specified | 3 | Early compatibility pilot; not prevalence evidence |
+
+These counts are copied from `docs/REPRODUCIBILITY.md` and `docs/PILOT_RESULTS.md`; the underlying raw run folders and detector JAR are documented as local/shared-storage artifacts intentionally excluded from Git. Consequently, this Analyst workspace cannot independently recompute or verify those totals from raw rows yet. Do not pool the runs: they are separate technical runs, and the JUnit4 and Commons CSV pilots have explicit limitations.
+
+## 5. Interpretation and limitations
 
 1. The estimated test-file count is a tree-based repository screening estimate. It is not a count of files successfully analyzed by tsDetect.
 2. The structural screening notes explicitly state that these records are not build, detector-compatibility, or PIT execution results.
@@ -52,7 +64,7 @@ The mean Java-file count is 773.6 (6,189 / 8). Medians are computed over the eig
 5. No per-file smell labels, validated PIT attribution, or complete outcome table are present in these two screening CSVs.
 6. Repository metadata such as stars and forks is descriptive context only; it is not a causal adjustment set.
 
-## 5. What is required for the final Analyst results
+## 6. What is required for the final Analyst results
 
 The following study-level inputs are still required in the accessible repository before inferential or causal analysis can be reproduced:
 
@@ -63,7 +75,7 @@ The following study-level inputs are still required in the accessible repository
 - Manual validation labels for detector accuracy and reviewer agreement.
 - Raw-run manifests and provenance.
 
-## 6. Reproduction
+## 7. Reproduction
 
 Run from the repository root:
 
