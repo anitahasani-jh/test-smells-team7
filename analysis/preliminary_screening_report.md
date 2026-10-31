@@ -22,7 +22,7 @@
 | Measure | N | Total | Mean | Median | Minimum | Maximum |
 |---|---:|---:|---:|---:|---:|---:|
 | Estimated Java test-file candidates | 8 | 2,692 | 336.5 | 323.5 | 45 | 767 |
-| Java files | 8 | 6,189 | 773.6 | 714.0 | 124 | 1,805 |
+| Java files | 8 | 6,189 | 773.6 | 716 | 124 | 1,805 |
 | GitHub stars at screening | 8 | 52,112 | 6,514 | 5,545.5 | 1,877 | 15,454 |
 | GitHub forks at screening | 8 | 10,980 | 1,372.5 | 1,096 | 268 | 3,249 |
 | Maven build-file count | 8 | 70 | 8.75 | 4 | 0 | 47 |
